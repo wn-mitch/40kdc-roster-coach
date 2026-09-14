@@ -1,0 +1,38 @@
+{
+  "name": "40kdc-roster-coach",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local, evidence-backed Warhammer 40,000 roster coaching helpers",
+  "bin": {
+    "roster-coach": "./dist/cli.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    ".agents/skills/40k-roster-coach"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "check": "npm run build && npm test",
+    "smoke": "npm run build && node dist/cli.js context"
+  },
+  "dependencies": {
+    "@alpaca-software/40kdc-data": "1.4.3",
+    "zod": "4.6.5"
+  },
+  "overrides": {
+    "fast-xml-parser": "5.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

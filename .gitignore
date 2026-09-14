@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.roster-coach/
+*.tsbuildinfo
+.DS_Store
+omp-session-*.html

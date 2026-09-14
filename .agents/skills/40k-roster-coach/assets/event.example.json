@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "id": "sample-rtt",
+  "label": "Sample RTT",
+  "format": "rtt",
+  "fieldSize": null,
+  "rulesCutoff": null
+}

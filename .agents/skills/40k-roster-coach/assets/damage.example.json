@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "attacker": {
+    "weaponId": "weapon-id",
+    "profileIndex": 0,
+    "modelsFiring": 1
+  },
+  "target": {
+    "unitId": "target-unit-id",
+    "factionId": "target-faction-id",
+    "profileIndex": 0,
+    "modelCount": 1
+  },
+  "buffs": [],
+  "context": {},
+  "effectCoverage": [
+    {
+      "reference": "weapon-profile",
+      "side": "attacker",
+      "treatment": "modeled",
+      "note": "Intrinsic profile and supported weapon keywords use the public engine."
+    },
+    {
+      "reference": "target-ability-audit",
+      "side": "target",
+      "treatment": "unresolved",
+      "note": "Replace with the audited defensive-effect treatment before using this projection for a recommendation."
+    }
+  ]
+}

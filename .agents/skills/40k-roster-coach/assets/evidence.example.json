@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "sample-scouting-01",
+  "stream": "direct_scouting",
+  "claim": "A possible attendee is practicing a vehicle-heavy roster for a different format.",
+  "originalText": "Local alias is practicing vehicle spam for teams.",
+  "source": {
+    "kind": "user_report",
+    "locator": "conversation:sample"
+  },
+  "eventRef": "sample-rtt",
+  "subjectRef": "local-alias-01",
+  "attendanceStatus": "possible",
+  "rosterCommitment": "practicing",
+  "eventApplicability": "teams_context",
+  "sourceConfidence": "high",
+  "interpretationConfidence": "high",
+  "scenarioTags": ["vehicle-pressure"]
+}
