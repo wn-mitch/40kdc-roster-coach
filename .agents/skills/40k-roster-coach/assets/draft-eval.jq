@@ -9,6 +9,8 @@
 # reserve, army box, embarked, else on board. Centroid error is reported only
 # when both sides place the unit on the board.
 
+# Embarked models are also flagged `in_reserves`, so the transport check must
+# come first.
 def mean: add / length;
 def key: "\(.player):\(.unit_id)";
 
@@ -16,9 +18,9 @@ def key: "\(.player):\(.unit_id)";
     (map(select(.is_killed | not))) as $alive
     | {key: (.[0] | key), value: {
         status: (if ($alive | length) == 0 then "destroyed"
-                 elif any($alive[]; .in_reserves) then "reserve"
-                 elif any($alive[]; .in_army_box) then "army_box"
                  elif any($alive[]; .transport_unit_id != null) then "embarked"
+                 elif any($alive[]; .in_army_box) then "army_box"
+                 elif any($alive[]; .in_reserves) then "reserve"
                  else "on_board" end),
         models_alive: ($alive | length),
         centroid: (if ($alive | length) == 0 then null
