@@ -8,3 +8,4 @@
 - Add bounded Listhammer capture and normalized local-meta evidence synthesis.
 - Add debrief-led roster iteration without privileging the incumbent.
 - Add Listhammer venue-regular research with BCP limited to active-event gaps.
+- Add screenshot board review through Shadowboxing saves and coaching reports.
